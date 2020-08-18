@@ -1,5 +1,6 @@
 const express = require('express');
 const getAverages = require('./index').getAverages;
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 
@@ -31,4 +32,4 @@ app.get('/search/:searchType/:searchInput', async (req, res) => {
 
 });
 
-app.listen(3000, () => console.log(`listening at http://localhost:3000`));
+app.listen(PORT, () => console.log(`listening on port ${ PORT }`));
